@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<section class="col-md-6">
+    <form action="/add_ticket" method="post">
+        <label> Ditt nummer: </label><input type="number" name="ticket_num"><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+{% endblock %}
