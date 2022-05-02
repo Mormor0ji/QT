@@ -8,15 +8,43 @@
     <link href="../static/css/style.css" rel="stylesheet">
     <script type="text/javascript" src="../static/js/main.js"></script>
     <title>Que-t</title>
+    <style>
+body {
+background-image: linear-gradient(to bottom right, yellow, #93C572, #DA70D6)
+}
 
+h1 {
+  color: white;
+  background-color: #93C572;
+  font-family: garamond;
+  font-size: 300%;
+  border: 20px solid #93C572;
+  margin: 0px;
+
+}
+p  {
+  color: white;
+  background-color: #93C572;
+  font-family: garamond;
+  font-size: 160%;
+  border: 20px solid #93C572;
+  margin: 50px;
+}
+label  {
+  color: white;
+  background-color: #93C572;
+  font-family: garamond;
+  font-size: 160%;
+  border: 20px solid #93C572;
+  margin: 50px;
+}
+</style>
 </head>
-
-<body class="m-4">
-<nav class="navbar navbar-expand-lg bg-light">
-    <a class="nav-link text-light" href="/add_place">Add place</a>
-    <a class="nav-link text-light" href="/add_ticket">Add ticket</a>
-</nav>
-
+<header>
+    <h1><b>Välkommen till Que-T!</b></h1>
+</header>
+<body>
+<p><b> Skriv in din plats och könummer så skickar vi en notis när det är din tur. </b></p>
 
 <div class="d-flex justify-content-lg-center">
 {%block body %} {% endblock %}
