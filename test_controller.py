@@ -30,7 +30,7 @@ def add_ticket():
 @app.route('/show_ticket')
 def show_ticket():
     your_number =get_number()
-    current_num = 342
+    current_num = 30
     waiting = waiting_num(your_number, current_num)
     return render_template('ticket_page.html',your_number=your_number, current=current_num, waiting=waiting)
 
