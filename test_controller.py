@@ -11,6 +11,7 @@ def home():
 
 places = ['post', 'coop']
 
+
 @app.route('/add_place', methods=['POST'])
 def add_place():
     place = request.form['place']
@@ -37,3 +38,5 @@ def show_ticket():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#testkörning
