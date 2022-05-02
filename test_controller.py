@@ -1,5 +1,5 @@
-from flask import Flask, request, render_template
-from test_model import waiting_num
+from flask import Flask, request, render_template, redirect
+from test_model import waiting_num, store_ticket_num, get_number
 
 app = Flask(__name__)
 
@@ -11,7 +11,6 @@ def home():
 
 places = ['post', 'coop']
 
-#hej sandra
 
 @app.route('/add_place', methods=['POST'])
 def add_place():
@@ -25,13 +24,16 @@ def add_place():
 @app.route('/add_ticket', methods=['POST'])
 def add_ticket():
     ticket_num = request.form['ticket_num']
-    return render_template('ticket_page.html', variable= ticket_num)
+    store_ticket_num(ticket_num)
+    return redirect('/show_ticket')
 
 
 @app.route('/show_ticket')
 def show_ticket():
-    current_num = '342'
-    return render_template('ticket_page.html',cnummer=current_num)
+    your_number =get_number()
+    current_num = 30
+    waiting = waiting_num(your_number, current_num)
+    return render_template('ticket_page.html',your_number=your_number, current=current_num, waiting=waiting)
 
 
 if __name__ == '__main__':
