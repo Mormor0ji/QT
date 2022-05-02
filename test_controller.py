@@ -4,6 +4,7 @@ from test_model import waiting_num
 app = Flask(__name__)
 
 #test test test
+gdsdfdgdsf
 
 @app.route('/')
 def home():
